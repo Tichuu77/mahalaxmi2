@@ -2,7 +2,7 @@ export default function FloatingActionButtons() {
   return (
     <>
       {/* Call Button - Left */}
-      <div className="fixed bottom-8 left-8 z-40">
+      <div className="fixed bottom-8 left-6 md:left-8 z-40">
         <a
           href="tel:+918766887828"
           target="_blank"
@@ -11,9 +11,9 @@ export default function FloatingActionButtons() {
           aria-label="Call"
         >
           <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-full animate-pulse opacity-75"></div>
-          <div className="relative w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-110">
+          <div className="relative  w-10 h-10 md:w-16 md:h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-110">
             <svg
-              className="w-8 h-8 text-white"
+              className="w-4 h-4 md:w-8 md:h-8 text-white"
               fill="none"
               stroke="currentColor"
               strokeWidth="2"
@@ -32,7 +32,7 @@ export default function FloatingActionButtons() {
       </div>
 
       {/* WhatsApp Button - Right */}
-      <div className="fixed bottom-8 right-8 z-40">
+      <div className="fixed bottom-8 right-6 md:right-8 z-40">
         <a
           href="https://wa.me/918766887828"
           target="_blank"
@@ -41,9 +41,9 @@ export default function FloatingActionButtons() {
           aria-label="Chat on WhatsApp"
         >
           <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-full animate-pulse opacity-75"></div>
-          <div className="relative w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-110">
+          <div className="relative w-10 h-10 md:w-16 md:h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-110">
             <svg
-              className="w-8 h-8 text-white"
+              className="w-4 h-4 md:w-8 md:h-8 text-white"
               fill="currentColor"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"

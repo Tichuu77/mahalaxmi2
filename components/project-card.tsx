@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useState } from "react"
 import { ArrowRight } from "lucide-react"
@@ -25,6 +25,14 @@ export default function ProjectCard({ project }: { project: Project }) {
     completed: "Completed",
     ongoing: "Ongoing",
     upcoming: "Upcoming",
+  }
+
+  const handleWhatsApp = () => {
+    // Pre-filled message. Customize as needed.
+    const message = `Hi, I'm interested in the project "${project.name}" located at ${project.location}. Could you share more details?`
+    // Use wa.me with only a text to let user choose contact, or add a phone number like: https://wa.me/15551234567?text=...
+    const url = `https://wa.me/?text=${encodeURIComponent(message)}`
+    window.open(url, "_blank")
   }
 
   return (
@@ -57,7 +65,10 @@ export default function ProjectCard({ project }: { project: Project }) {
 
         <p className="text-foreground/70 font-poppins text-sm mb-6 leading-relaxed">{project.description}</p>
 
-        <button className="w-full bg-primary text-primary-foreground py-2 rounded-lg font-poppins font-semibold hover:opacity-90 transition-opacity flex items-center justify-center gap-2 group">
+        <button
+          onClick={handleWhatsApp}
+          className="w-full bg-primary text-primary-foreground py-2 rounded-lg font-poppins font-semibold hover:opacity-90 transition-opacity flex items-center justify-center gap-2 group hover:cursor-pointer"
+        >
           Know More
           <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
         </button>
