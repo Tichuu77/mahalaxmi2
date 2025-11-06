@@ -44,8 +44,8 @@ export default function Contact() {
     {
       icon: Phone,
       title: "Phone",
-      value: "+91 8766887828",
-      link: "tel:+918766887828",
+      value: "+919373117899",
+      link: "tel:+919373117899",
       color: "from-blue-400 to-blue-600",
       bgColor: "bg-blue-100",
     },

@@ -1,6 +1,5 @@
 "use client"
 
-import { ArrowRight } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
 
 export default function Hero() {
@@ -93,43 +92,67 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 className={`text-xl sm:text-4xl md:text-5xl lg:text-7xl font-playfair font-bold text-primary mb-4 md:mb-6 leading-tight transition-all duration-700 ${
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-        }`}>
-          Building Excellence. Creating Legacies.
-        </h1>
+        {/* Main Heading */}
+        <div className="space-y-4 mb-6 md:mb-8 max-w-4xl">
+          <h1
+            className={`text-xl sm:text-2xl md:text-3xl lg:text-4xl font-playfair font-bold text-primary transition-all duration-700 drop-shadow-lg ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
+            style={{ transitionDelay: "100ms" }}
+          >
+            Build Your Dream Home With Mahalaxmi Developers In Nagpur.
+          </h1>
+        </div>
 
-        <p className={`text-base text-[8px] md:text-xl text-white/90 mb-6 md:mb-8 max-w-2xl mx-auto font-poppins leading-relaxed transition-all duration-700 px-2 ${
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-        }`}
-           style={{ transitionDelay: "0.2s" }}>
-          Mahalaxmi Developers brings you premium real estate projects with a tradition of trust and excellence in every
-          development.
+        <div className="space-y-4 mb-6 md:mb-8 max-w-4xl">
+          <h1
+            className={`text-xl sm:text-2xl md:text-3xl lg:text-4xl font-playfair font-bold text-white transition-all duration-700 drop-shadow-lg ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
+            style={{ transitionDelay: "200ms" }}
+          >
+            Residential & Commercial Plots Heart Of City Nagpur.
+          </h1>
+        </div>
+
+        <div className="py-1 px-4 md:px-6 bg-primary mb-4 md:mb-6">
+          <h3 className="text-xs md:text-lg text-primary-foreground font-light">
+            NMRDA SANCTION RL RERA APPROVED PROJECTS
+          </h3>
+        </div>
+
+        <p className="text-white text-base md:text-xl lg:text-2xl font-extralight mb-4 md:mb-6 drop-shadow-md px-4">
+          Location- Besa, Beltarodi, Shankarpur, Wardha Road, Jamtha, katol road, Umred road, Koradi road & Samruddhi circle Nagpur.
         </p>
 
         {/* CTA Buttons */}
-        <div className={`flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center transition-all duration-700 ${
+        <div className={`flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center mb-8 md:mb-12 transition-all duration-700 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
-             style={{ transitionDelay: "0.4s" }}>
-          <button
-            onClick={() => scrollToSection('#projects')}
-            className=" w-1/2 md:w-full sm:w-auto bg-primary text-primary-foreground px-1 py-2 md:px-8 md:py-4 rounded-xl md:rounded-lg font-poppins font-semibold text-xs md:text-base hover:scale-105 active:scale-95 hover:shadow-2xl hover:shadow-primary/50 transition-all duration-300 flex items-center justify-center gap-2 group cursor-pointer touch-manipulation"
-          >
-            Explore Projects
-            <ArrowRight size={18} className="md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
-          </button>
-
+             style={{ transitionDelay: "300ms" }}>
           <button
             onClick={() => scrollToSection('#contact')}
-            className="w-1/2 md:w-full sm:w-auto border-2 border-primary text-primary bg-black/20 backdrop-blur-sm px-1 py-2 md:px-8 md:py-4 rounded-xl md:rounded-lg font-poppins font-semibold text-xs md:text-base hover:bg-primary hover:text-secondary transition-all duration-300 hover:scale-105 active:scale-95 hover:shadow-2xl hover:shadow-primary/50 cursor-pointer touch-manipulation"
+            className="w-full sm:w-auto bg-primary text-primary-foreground px-6 py-3 md:px-8 md:py-4 rounded-lg font-poppins font-semibold text-sm md:text-base hover:scale-105 active:scale-95 hover:shadow-2xl hover:shadow-primary/50 transition-all duration-300 cursor-pointer touch-manipulation"
           >
             Contact Us
           </button>
+
+          <button
+            onClick={() => scrollToSection('#projects')}
+            className="w-full sm:w-auto bg-primary text-primary-foreground px-6 py-3 md:px-8 md:py-4 rounded-lg font-poppins font-semibold text-sm md:text-base hover:scale-105 active:scale-95 hover:shadow-2xl hover:shadow-primary/50 transition-all duration-300 flex items-center justify-center gap-2 group cursor-pointer touch-manipulation"
+          >
+            Explore Projects
+          </button>
+        </div>
+
+        <div className="bg-primary py-3 px-6 rounded">
+          <h3 className="text-primary-foreground text-sm md:text-base">
+            Best For Investment @ 22 lakh only on samruddhi circle Nagpur.
+          </h3>
         </div>
       </div>
 
-      {/* Scroll Indicator - Hidden on small mobile */}
+      {/* Scroll Indicator */}
       <div className={`hidden sm:block absolute bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce transition-all duration-700 ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}>

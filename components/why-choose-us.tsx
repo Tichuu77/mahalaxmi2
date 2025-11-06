@@ -51,7 +51,7 @@ const item = {
 
 export default function WhyChooseUs() {
   return (
-    <section className="relative py-12 md:py-24 lg:py-32 px-3 sm:px-6 overflow-hidden bg-white">
+    <section id="why-choose-us" className="relative py-12 md:py-24 lg:py-32 px-3 sm:px-6 overflow-hidden bg-white">
       {/* Animated Background Elements */}
       <motion.div
         className="absolute -top-40 -right-20 w-80 h-80 md:w-96 md:h-96 rounded-full bg-yellow-400/10 blur-3xl"

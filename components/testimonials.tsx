@@ -3,33 +3,39 @@
 import { useState } from "react"
 import { ChevronLeft, ChevronRight, Star } from "lucide-react"
 
-const testimonials = [
-  {
-    id: 1,
-    name: "Sarah Johnson",
-    role: "Property Investor",
-    content:
-      "Artifact delivered an exceptional project. The attention to detail and quality of construction exceeded our expectations.",
-    rating: 5,
-    image: "/professional-woman-portrait.png",
-  },
-  {
-    id: 2,
-    name: "Michael Chen",
-    role: "Homeowner",
-    content: "Living in Skyline Residences has been a dream come true. The amenities and community are outstanding.",
-    rating: 5,
-    image: "/professional-man-portrait.png",
-  },
-  {
-    id: 3,
-    name: "Emma Williams",
-    role: "Business Owner",
-    content: "The commercial space we leased is perfect for our growing business. Highly recommend Artifact.",
-    rating: 5,
-    image: "/professional-woman-portrait-business.png",
-  },
-]
+  const testimonials = [
+    {
+      id: 1,
+      content:
+        "Investing in a by Maha Laxmi Developers transparent process made effortless experience. The best decision I ever made. The local transparent process made it an effortless experience.",
+      name: "Rajkumar Gharjale",
+      role: "CEO",
+      location: "Nagpur",
+      image: "https://pk.mahalaxmidevelopers.com/wp-content/uploads/2025/06/1-9.png",
+      rating: 5,
+    },
+    {
+      id: 2,
+      content:
+        "I wanted to invest in a growing area, and plots in Nagpur Besa seemed perfect. Maha Laxmi Developers exceeded my expectations. Highly recommended!",
+      name: "Priya Shah",
+      role: "CEO",
+      location: "Mumbai",
+      image: "https://pk.mahalaxmidevelopers.com/wp-content/uploads/2025/06/3-4.png",
+      rating: 5,
+    },
+    {
+      id: 3,
+      content:
+        "Investing in residential plots with Mahalaxmi Developers was one of my best decisions. Their transparency, clear titles, and prompt assistance gave me peace of mind.",
+      name: "Karan Akojwar",
+      role: "CEO",
+      location: "Pune",
+      image: "https://pk.mahalaxmidevelopers.com/wp-content/uploads/2025/06/4-2.png",
+      rating: 5,
+    },
+  ]
+
 
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -45,7 +51,7 @@ export default function Testimonials() {
   const current = testimonials[currentIndex]
 
   return (
-    <section className="py-20 bg-background">
+    <section id="testimonials" className="py-20 bg-background">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl sm:text-5xl font-playfair font-bold text-secondary mb-4">Client Testimonials</h2>

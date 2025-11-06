@@ -4,7 +4,7 @@ export default function FloatingActionButtons() {
       {/* Call Button - Left */}
       <div className="fixed bottom-8 left-6 md:left-8 z-40">
         <a
-          href="tel:+918766887828"
+          href="tel:+919373117899"
           target="_blank"
           rel="noopener noreferrer"
           className="relative group"
@@ -34,7 +34,7 @@ export default function FloatingActionButtons() {
       {/* WhatsApp Button - Right */}
       <div className="fixed bottom-8 right-6 md:right-8 z-40">
         <a
-          href="https://wa.me/918766887828"
+          href="https://wa.me/919373117899?text=Enquiry for more details"
           target="_blank"
           rel="noopener noreferrer"
           className="relative group"

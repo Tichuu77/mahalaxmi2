@@ -10,11 +10,16 @@ export default function Header() {
 
   const navLinks = [
     { label: "Home", href: "#home" },
+    { label: "About", href: "#about" },
     { label: "Projects", href: "#projects" },
     { label: "Amenities", href: "#amenities" },
+    { label: "Why Choose Us", href: "#why-choose-us" },
+    { label: "Testimonials", href: "#testimonials" },
+    {label : "Gallery", href : "#gallery"},
     { label: "User Guide", href: "#user-guide" },
     { label: "News", href: "#news" },
     { label: "Contact", href: "#contact" },
+
   ]
 
   return (
@@ -22,7 +27,7 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 hover-scale">
           <Image
-            src="/mahalaxmi-logo.png"
+            src="/Mahalaxmi Infra new Logo.png"
             alt="Mahalaxmi Developers"
             width={50}
             height={50}

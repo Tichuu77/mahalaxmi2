@@ -46,18 +46,22 @@ export default function About() {
 
   const values = [
     { 
+      icon : "🌟",
       title: "Innovation", 
       description: "Incorporating cutting-edge technology and design principles in every project"
     },
     { 
+      icon : "👨‍👩‍👧‍👦",
       title: "Integrity", 
       description: "Maintaining transparency and ethical practices in all our business dealings"
     },
     { 
+      icon : "⚡",
       title: "Excellence", 
       description: "Delivering superior quality through meticulous attention to detail"
     },
     { 
+      icon : "🌳",
       title: "Sustainability", 
       description: "Building environmentally responsible projects for future generations"
     }
@@ -218,7 +222,7 @@ export default function About() {
                 >
                   <div className="flex items-start gap-3 md:gap-4">
                     <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-primary to-primary/60 rounded-lg md:rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-active:scale-105 transition-transform duration-300">
-                      <div className="w-5 h-5 md:w-6 md:h-6 border-2 border-white rounded" />
+                      <span>{value.icon}</span>
                     </div>
                     <div>
                       <h4 className="text-lg md:text-xl font-playfair font-bold text-secondary mb-1.5 md:mb-2 group-hover:text-primary transition-colors duration-300">
