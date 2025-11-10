@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   title: "Mahalaxmi Developers - Premium Real Estate",
   description: "Discover premium real estate projects by Mahalaxmi Developers. A tradition of trust.",
   generator: "v0.app",
+   icons: '/Mahalaxmi Infra new Logo.png',
 }
 
 export default function RootLayout({

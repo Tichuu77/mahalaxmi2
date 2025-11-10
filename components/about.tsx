@@ -80,7 +80,7 @@ export default function About() {
           >
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-transparent z-10 pointer-events-none" />
             <img 
-              src="/luxury-real-estate-interior-design.jpg" 
+              src="/aboutUs.webp" 
               alt="Luxury interior design" 
               className="w-full h-full object-cover transform hover:scale-110 active:scale-105 transition-transform duration-700 ease-out" 
             />
