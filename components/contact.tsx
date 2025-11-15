@@ -13,25 +13,48 @@ export default function Contact() {
     message: "",
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitted, setSubmitted] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    
-    setTimeout(() => {
-      console.log("Form submitted:", formData)
+    setSubmitStatus("idle")
+
+    // Validate required fields
+    if (!formData.name || !formData.email || !formData.message) {
+      setSubmitStatus("error")
       setIsSubmitting(false)
-      setSubmitted(true)
-      setFormData({ name: "", email: "", phone: "", message: "" })
-      
-      setTimeout(() => setSubmitted(false), 3000)
-    }, 1500)
+      setTimeout(() => setSubmitStatus("idle"), 3000)
+      return
+    }
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      })
+
+      if (res.ok) {
+        setSubmitStatus("success")
+        setFormData({ name: "", email: "", phone: "", message: "" })
+        setTimeout(() => setSubmitStatus("idle"), 5000)
+      } else {
+        setSubmitStatus("error")
+        setTimeout(() => setSubmitStatus("idle"), 3000)
+      }
+    } catch (error) {
+      console.error(error)
+      setSubmitStatus("error")
+      setTimeout(() => setSubmitStatus("idle"), 3000)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleWhatsApp = () => {
@@ -52,8 +75,8 @@ export default function Contact() {
     {
       icon: Mail,
       title: "Email",
-      value: "info@mahalaxmi.com",
-      link: "mailto:info@mahalaxmi.com",
+      value: "patilvinod970@gmail.com",
+      link: "mailto:patilvinod970@gmail.com",
       color: "from-red-400 to-red-600",
       bgColor: "bg-red-100",
     },
@@ -211,6 +234,7 @@ export default function Contact() {
                   onChange={handleChange}
                   className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl bg-gray-50 text-secondary focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all"
                   placeholder="John Doe"
+                  required
                 />
               </motion.div>
 
@@ -230,6 +254,7 @@ export default function Contact() {
                   onChange={handleChange}
                   className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl bg-gray-50 text-secondary focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all"
                   placeholder="john@example.com"
+                  required
                 />
               </motion.div>
             </div>
@@ -269,19 +294,42 @@ export default function Contact() {
                 rows={4}
                 className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl bg-gray-50 text-secondary focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent resize-none transition-all"
                 placeholder="Tell us about your project..."
+                required
               />
             </motion.div>
+
+            {/* Status Messages */}
+            {submitStatus === "error" && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="p-4 bg-red-50 border border-red-200 rounded-xl text-red-600 text-sm"
+              >
+                Please fill in all required fields and try again.
+              </motion.div>
+            )}
+
+            {submitStatus === "success" && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="p-4 bg-green-50 border border-green-200 rounded-xl text-green-600 text-sm"
+              >
+                Thank you! Your message has been sent successfully.
+              </motion.div>
+            )}
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 pt-2">
               <motion.button
                 onClick={handleSubmit}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+                disabled={isSubmitting}
+                whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
+                whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
                 className={`flex-1 py-3 md:py-4 rounded-xl font-semibold transition-all flex items-center justify-center gap-2 ${
-                  submitted 
+                  submitStatus === "success"
                     ? 'bg-green-500 text-white'
-                    : 'bg-gradient-to-r from-yellow-400 to-yellow-500 text-white hover:shadow-lg'
+                    : 'bg-gradient-to-r from-yellow-400 to-yellow-500 text-white hover:shadow-lg disabled:opacity-70 disabled:cursor-not-allowed'
                 }`}
               >
                 {isSubmitting ? (
@@ -293,7 +341,7 @@ export default function Contact() {
                     />
                     Sending...
                   </>
-                ) : submitted ? (
+                ) : submitStatus === "success" ? (
                   <>
                     <motion.div
                       initial={{ scale: 0 }}

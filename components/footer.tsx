@@ -76,7 +76,7 @@ export default function Footer() {
             <ul className="space-y-3 font-poppins text-sm">
               <li>
                 <a 
-                  href="tel:+918766887828" 
+                  href="tel:+919373117899" 
                   className="flex items-start gap-3 text-white/80 hover:text-primary transition-colors group"
                 >
                   <Phone className="w-5 h-5 flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
@@ -85,7 +85,7 @@ export default function Footer() {
               </li>
               <li>
                 <a 
-                  href="mailto:info@mahalaxmidevelopers.com" 
+                  href="mailto: patilvinod970@gmail.com" 
                   className="flex items-start gap-3 text-white/80 hover:text-primary transition-colors group"
                 >
                   <Mail className="w-5 h-5 flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
@@ -110,7 +110,7 @@ export default function Footer() {
             <div className="flex gap-4">
               {/* Email */}
               <a 
-                href="mailto:info@mahalaxmidevelopers.com" 
+                href="mailto: patilvinod970@gmail.com" 
                 className="w-10 h-10 rounded-full bg-white/10 hover:bg-primary flex items-center justify-center transition-all hover:scale-110" 
                 aria-label="Email Mahalaxmi Developers"
               >
@@ -119,7 +119,7 @@ export default function Footer() {
               
               {/* Phone */}
               <a 
-                href="tel:+918766887828" 
+                href="tel:+919373117899" 
                 className="w-10 h-10 rounded-full bg-white/10 hover:bg-primary flex items-center justify-center transition-all hover:scale-110" 
                 aria-label="Call Mahalaxmi Developers"
               >
