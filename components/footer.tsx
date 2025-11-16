@@ -9,9 +9,9 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
               <img
-                src="/Mahalaxmi Infra new Logo.png"
+                src="/Malaxmi-Final-Logo.-2png.png"
                 alt="Mahalaxmi Developers"
-                className="h-10 w-auto"
+                className="h-20 w-20"
               />
               <div>
                 <div className="text-lg font-playfair font-bold text-white">MAHALAXMI</div>
@@ -74,6 +74,10 @@ export default function Footer() {
           <div>
             <h4 className="font-playfair font-bold text-white text-lg mb-4">Contact Info</h4>
             <ul className="space-y-3 font-poppins text-sm">
+
+              <li>
+                Vinod Patil
+              </li>
               <li>
                 <a 
                   href="tel:+919373117899" 
@@ -89,7 +93,7 @@ export default function Footer() {
                   className="flex items-start gap-3 text-white/80 hover:text-primary transition-colors group"
                 >
                   <Mail className="w-5 h-5 flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
-                  <span className="break-all">info@mahalaxmidevelopers.com</span>
+                  <span className="break-all">patilvinod970@gmail.com</span>
                 </a>
               </li>
               <li>
