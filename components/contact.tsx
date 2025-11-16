@@ -59,7 +59,7 @@ export default function Contact() {
 
   const handleWhatsApp = () => {
     const message = `Hi, I'm ${formData.name || 'interested'}. I would like to know more about your projects.`
-    const url = `https://wa.me/918766887828?text=${encodeURIComponent(message)}`
+    const url = `https://wa.me/919373117899?text=${encodeURIComponent(message)}`
     window.open(url, "_blank")
   }
 
