@@ -31,7 +31,7 @@ export default function ProjectCard({ project }: { project: Project }) {
     // Pre-filled message. Customize as needed.
     const message = `Hi, I'm interested in the project "${project.name}" located at ${project.location}. Could you share more details?`
     // Use wa.me with only a text to let user choose contact, or add a phone number like: https://wa.me/15551234567?text=...
-    const url = `https://wa.me/?text=${encodeURIComponent(message)}`
+    const url = `https://wa.me/919373117899?text=${encodeURIComponent(message)}`
     window.open(url, "_blank")
   }
 
