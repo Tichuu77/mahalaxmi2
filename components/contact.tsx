@@ -364,7 +364,7 @@ export default function Contact() {
                 onClick={handleWhatsApp}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="flex-1 bg-green-500 hover:bg-green-600 text-white py-3 md:py-4 rounded-xl font-semibold transition-all flex items-center justify-center gap-2"
+                className="flex-1 hover:cursor-pointer bg-green-500 hover:bg-green-600 text-white py-3 md:py-4 rounded-xl font-semibold transition-all flex items-center justify-center gap-2"
               >
                 <MessageCircle className="w-5 h-5" />
                 WhatsApp

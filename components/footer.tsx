@@ -84,7 +84,7 @@ export default function Footer() {
                   className="flex items-start gap-3 text-white/80 hover:text-primary transition-colors group"
                 >
                   <Phone className="w-5 h-5 flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
-                  <span>+91 87668 87828</span>
+                  <span>+91 9373117899</span>
                 </a>
               </li>
               <li>

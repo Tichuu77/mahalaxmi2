@@ -298,7 +298,7 @@ export default function UserGuide() {
           className="text-center mt-8 md:mt-12"
         >
           <motion.a
-            href="https://wa.me/918766887828"
+            href="https://wa.me/919373117899"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
